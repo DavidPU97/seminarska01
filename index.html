@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="scripts/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="scripts/bootstrap.min.css" />
+    
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/moment.min.js"></script>
+    <script type="text/javascript" src="scripts/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="scripts/popper.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    
+    
+    <title>Izposojevalnica avtomobilov Avtek</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Izposojevalnica Avtek!</h1>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="prevzem">Lokacija prevzema</label>
+              <div>
+                <select class="form-select" id="prevzem" aria-label="Lokacija prevzema">
+                  <option selected disabled>Izberite lokacijo</option>
+                  <option value="1">Ljubljana</option>
+                  <option value="2">Maribor</option>
+                  <option value="3">Celje</option>
+                  <option value="4">Kranj</option>
+                  <option value="5">Velenje</option>
+                  <option value="6">Koper</option>
+                  <option value="7">Novo Mesto</option>
+                  <option value="8">Murska Sobota</option>
+                  <option value="9">Jesenice</option>
+                  <option value="10">Portorož</option>
+                  <option value="11">Letališče Brnik</option>
+                  <option value="12">Letališče Maribor</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="vračilo">Lokacija vračila</label>
+              <div>
+                <select class="form-select" id="vračilo" aria-label="Lokacija vračila">
+                  <option selected disabled>Izberite lokacijo</option>
+                  <option value="1">Ljubljana</option>
+                  <option value="2">Maribor</option>
+                  <option value="3">Celje</option>
+                  <option value="4">Kranj</option>
+                  <option value="5">Velenje</option>
+                  <option value="6">Koper</option>
+                  <option value="7">Novo Mesto</option>
+                  <option value="8">Murska Sobota</option>
+                  <option value="9">Jesenice</option>
+                  <option value="10">Portorož</option>
+                  <option value="11">Letališče Brnik</option>
+                  <option value="12">Letališče Maribor</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="date">Termin izposoje avtomobila</label>
+              <input type="text" class="form-control" id="date" name="datetimes" value="01/01/2018 - 01/15/2018" />
+            </div>
+            <div class="col-sm-6">
+              <p>Velikost vozila</p>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="velikost" id="velikost1" value="0">
+                    <label class="form-check-label" for="velikost1">
+                      Majhno</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="velikost" id="velikost2" value="1">
+                    <label class="form-check-label" for="velikost2">
+                      Srednje
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="velikost" id="velikost3" value="2">
+                    <label class="form-check-label" for="velikost3">
+                      Veliko
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="model">Model vozila</label>
+              <div>
+                <select class="form-select" id="model" aria-label="Model avtomobila">
+                  <option selected disabled>izberite model</option>
+                  <option value="1">MB C180</option>
+                  <option value="2">Audi A5</option>
+                  <option value="3">Toyota Avensis</option>
+                  <option value="4">Honda Accord</option>
+                  <option value="5">Škoda Octavia</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <p>Vrsta menjalnika</p>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="menjalnik" id="menjalnik1" value="0">
+                    <label class="form-check-label" for="menjalnik1">
+                      Ročni
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="menjalnik" id="menjalnik2" value="1">
+                    <label class="form-check-label" for="menjalnik2">
+                      Samodejni
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Pogon motorja</p>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pogon" id="pogon1" value="0">
+                    <label class="form-check-label" for="pogon1">
+                      Dizel
+                    </label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pogon" id="pogon2" value="1">
+                    <label class="form-check-label" for="pogon2">
+                      Bencin
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 d-flex align-items-end justify-content-end">
+              <div id="total_price">CENA: </div>
+            </div>
+          </div>
+          <br>
+          <div class="row justify-content-end">
+            <button type="button" id="myButton" class="btn btn-primary">Naprej</button>
+          </div>
+        </div>
+      
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

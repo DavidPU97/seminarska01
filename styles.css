@@ -1,0 +1,23 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+
+
+
+#date{
+    /*min-width: 400px;
+    width: auto;*/
+    width: -webkit-fill-available;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+#total_price{
+    font-weight: bold;
+    font-size: large;
+}
+
+#backBtn{
+    margin-bottom: 1rem;
+}

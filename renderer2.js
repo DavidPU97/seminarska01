@@ -79,6 +79,28 @@ $(function() {
         console.log($('#zavarovanje').is(':checked'))
         location.href = "index.html";
     };
+
+    document.getElementById("submitDiv").onclick = function () {
+
+        let valid = true
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+        
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                if (!form.checkValidity()) {
+                valid = false
+                }
+        
+                form.classList.add('was-validated')
+            })
+      
+        if(valid){
+            sessionStorage.clear()
+            location.href = "index.html";
+        }
+    };
 });
 
 

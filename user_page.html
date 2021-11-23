@@ -19,134 +19,174 @@
   </head>
   <body>
     <div class="container">
-      <h1>Izposojevalnica Avtek!</h1>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="name">Ime</label>
-                        <input type="text" class="form-control" id="name" placeholder="Vnesite ime">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="name">Priimek</label>
-                        <input type="text" class="form-control" id="surname" placeholder="Vnesite priimek">
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="name">Ulica in hišna številka</label>
-                        <input type="text" class="form-control" id="address" placeholder="Vnesite naslov">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <label for="name">Mesto</label>
-                        <input type="text" class="form-control" id="city" placeholder="npr. Ljubljana">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <label for="name">Poštna številka</label>
-                        <input type="text" class="form-control" id="postcode" placeholder="npr. 1000">
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">E-mail naslov</label>
-                        <input type="email" class="form-control" id="email" placeholder="racun@email.com">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="name">Telefonska številka</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="npr. 030 123 123">
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Starost</label>
-                        <input type="text" class="form-control" id="age" placeholder="Vnesite starost">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <label for="name">Število let izpita</label>
-                        <input type="text" class="form-control" id="car_license" placeholder="Vnesite število let izpita">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <p>Dodatno zavarovanje</p>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="zavarovanje">
-                        <label class="custom-control-label" for="zavarovanje">DA/NE</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>Način plačila</p>
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="placilo" id="placilo1" value="0">
-                            <label class="form-check-label" for="placilo1">
-                                Gotovina</label>
+        <h1>Izposojevalnica Avtek!</h1>
+        <form class="needs-validation" novalidate>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="name">Ime</label>
+                            <input type="text" class="form-control" id="name" placeholder="Vnesite ime" required>
+                            <div class="invalid-feedback">
+                                Vnesite ime
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="placilo" id="placilo2" value="1">
-                            <label class="form-check-label" for="placilo2">
-                                Kartica</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="name">Priimek</label>
+                            <input type="text" class="form-control" id="surname" placeholder="Vnesite priimek" required>
+                            <div class="invalid-feedback">
+                                Vnesite priimek
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 d-flex align-items-end justify-content-end">
-                    <div id="total_price">CENA: </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Številka kartice</label>
-                        <input type="text" class="form-control" id="cardnumber" placeholder="npr. 0123-4567-0123-1234">
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="name">Ulica in hišna številka</label>
+                            <input type="text" class="form-control" id="address" placeholder="Vnesite naslov" required>
+                            <div class="invalid-feedback">
+                                Vnesite naslov
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="name">Mesto</label>
+                            <input type="text" class="form-control" id="city" placeholder="npr. Ljubljana" required>
+                            <div class="invalid-feedback">
+                                Vnesite mesto
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="name">Poštna številka</label>
+                            <input type="text" class="form-control" id="postcode" placeholder="npr. 1000" required>
+                            <div class="invalid-feedback">
+                                Vnesite poštno številko
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">CCV</label>
-                        <input type="text" class="form-control" id="ccv" placeholder="npr. 123">
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">E-mail naslov</label>
+                            <input type="email" class="form-control" id="email" placeholder="racun@email.com" required>
+                            <div class="invalid-feedback">
+                                Vnesite elektronski naslov
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="name">Telefonska številka</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="npr. 030 123 123" required>
+                            <div class="invalid-feedback">
+                                Vnesite telefonsko številko
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-3 d-flex align-items-end justify-content-end">
-                    <button type="button" id="backBtn" class="btn btn-primary">Nazaj</button>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Starost</label>
+                            <input type="text" class="form-control" id="age" placeholder="Vnesite starost" required>
+                            <div class="invalid-feedback">
+                                Vnesite starost
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="name">Število let izpita</label>
+                            <input type="text" class="form-control" id="car_license" placeholder="Vnesite število let izpita" required>
+                            <div class="invalid-feedback">
+                                Vnesite število let izpita
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <p>Dodatno zavarovanje</p>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="zavarovanje">
+                            <label class="custom-control-label" for="zavarovanje">DA/NE</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Način plačila</p>
+                        <div class="radioButtons">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="placilo" id="placilo1" value="0" required>
+                                <label class="form-check-label" for="placilo1">
+                                    Gotovina</label>
+                                <div class="invalid-feedback">
+                                    Izberite način plačila
+                                </div>
+                            </div>
+                            <div class="form-check rbNotFirst">
+                                <input class="form-check-input" type="radio" name="placilo" id="placilo2" value="1" required>
+                                <label class="form-check-label" for="placilo2">
+                                    Kartica</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Številka kartice</label>
+                            <input type="text" class="form-control" id="cardnumber" placeholder="npr. 0123-4567-0123-1234" required>
+                            <div class="invalid-feedback">
+                                Vnesite številko kreditne kartice
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">CCV</label>
+                            <input type="text" class="form-control" id="ccv" placeholder="npr. 123" required>
+                            <div class="invalid-feedback">
+                                Vnesite CCV
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 d-flex align-items-end justify-content-end">
+                        <div id="total_price">CENA: </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6 d-flex align-items-end justify-content-end" id="user_price">
+                        <div id="total_price">CENA: </div>
+                    </div>
+                </div>-->
+                
+                <div class="row justify-content-end">
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <div class="col" id="backDiv">
+                                <button type="button" id="backBtn" class="btn btn-primary">Nazaj</button>
+                            </div>
+                            <div class="col d-flex justify-content-end" id="submitDiv">
+                                <button type="button" id="submitBtn" class="btn btn-success d-flex justify-content-end">Potrdi</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-sm-6"></div>
-                <div class="col-sm-6 d-flex align-items-end justify-content-end" id="user_price">
-                    <div id="total_price">CENA: </div>
-                </div>
-            </div>
-            
-            <div class="row justify-content-end">
-                <button type="button" id="backBtn" class="btn btn-primary">Nazaj</button>
-            </div> -->
-        </div>
+        </form>
       
     </div>
 

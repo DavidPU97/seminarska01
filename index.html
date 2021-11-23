@@ -20,12 +20,13 @@
   <body>
     <div class="container">
       <h1>Izposojevalnica Avtek!</h1>
+      <form class="needs-validation" novalidate>
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="prevzem">Lokacija prevzema</label>
+              <label for="prevzem" class="form-label">Lokacija prevzema</label>
               <div>
-                <select class="form-select" id="prevzem" aria-label="Lokacija prevzema">
+                <select class="form-select" id="prevzem" aria-label="Lokacija prevzema" required>
                   <option selected disabled>Izberite lokacijo</option>
                   <option value="1">Ljubljana</option>
                   <option value="2">Maribor</option>
@@ -40,12 +41,15 @@
                   <option value="11">Letališče Brnik</option>
                   <option value="12">Letališče Maribor</option>
                 </select>
+                <div class="invalid-feedback">
+                  Izberite lokacijo prevzema
+                </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <label for="vračilo">Lokacija vračila</label>
+              <label for="vračilo" class="form-label">Lokacija vračila</label>
               <div>
-                <select class="form-select" id="vračilo" aria-label="Lokacija vračila">
+                <select class="form-select" id="vračilo" aria-label="Lokacija vračila" required>
                   <option selected disabled>Izberite lokacijo</option>
                   <option value="1">Ljubljana</option>
                   <option value="2">Maribor</option>
@@ -60,50 +64,50 @@
                   <option value="11">Letališče Brnik</option>
                   <option value="12">Letališče Maribor</option>
                 </select>
+                <div class="invalid-feedback">
+                  Izberite lokacijo vračila
+                </div>
               </div>
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-sm-6">
-              <label for="date">Termin izposoje avtomobila</label>
+              <label for="date" class="form-label">Termin izposoje avtomobila</label>
               <input type="text" class="form-control" id="date" name="datetimes" value="01/01/2018 - 01/15/2018" />
             </div>
             <div class="col-sm-6">
               <p>Velikost vozila</p>
-              <div class="row">
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="velikost" id="velikost1" value="0">
-                    <label class="form-check-label" for="velikost1">
-                      Majhno</label>
+              <div class="radioButtons">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="velikost" id="velikost1" value="0" required>
+                  <label class="form-check-label" for="velikost1">
+                    Majhno</label>
+                    <div class="invalid-feedback">
+                      Izberite velikost
+                    </div>
                   </div>
+                <div class="form-check rbNotFirst">
+                  <input class="form-check-input" type="radio" name="velikost" id="velikost2" value="1" required>
+                  <label class="form-check-label" for="velikost2">
+                    Srednje
+                  </label>
                 </div>
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="velikost" id="velikost2" value="1">
-                    <label class="form-check-label" for="velikost2">
-                      Srednje
-                    </label>
-                  </div>
+                <div class="form-check rbNotFirst">
+                  <input class="form-check-input" type="radio" name="velikost" id="velikost3" value="2" required>
+                  <label class="form-check-label" for="velikost3">
+                    Veliko
+                  </label>
                 </div>
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="velikost" id="velikost3" value="2">
-                    <label class="form-check-label" for="velikost3">
-                      Veliko
-                    </label>
-                  </div>
-                </div>
-              </div>
+            </div>
             </div>
           </div>
           <br>
           <div class="row">
             <div class="col-sm-6">
-              <label for="model">Model vozila</label>
+              <label for="model" class="form-label">Model vozila</label>
               <div>
-                <select class="form-select" id="model" aria-label="Model avtomobila">
+                <select class="form-select" id="model" aria-label="Model avtomobila" required>
                   <option selected disabled>izberite model</option>
                   <option value="1">MB C180</option>
                   <option value="2">Audi A5</option>
@@ -111,26 +115,28 @@
                   <option value="4">Honda Accord</option>
                   <option value="5">Škoda Octavia</option>
                 </select>
+                <div class="invalid-feedback">
+                  Izberite ustrezen model avtomobila
+                </div>
               </div>
             </div>
             <div class="col-sm-6">
               <p>Vrsta menjalnika</p>
-              <div class="row">
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="menjalnik" id="menjalnik1" value="0">
-                    <label class="form-check-label" for="menjalnik1">
-                      Ročni
-                    </label>
+              <div class="radioButtons">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="menjalnik" id="menjalnik1" value="0" required>
+                  <label class="form-check-label" for="menjalnik1">
+                    Ročni
+                  </label>
+                  <div class="invalid-feedback">
+                    Izberite tip menjalnika
                   </div>
                 </div>
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="menjalnik" id="menjalnik2" value="1">
-                    <label class="form-check-label" for="menjalnik2">
-                      Samodejni
-                    </label>
-                  </div>
+                <div class="form-check rbNotFirst">
+                  <input class="form-check-input" type="radio" name="menjalnik" id="menjalnik2" value="1" required>
+                  <label class="form-check-label" for="menjalnik2">
+                    Samodejni
+                  </label>
                 </div>
               </div>
             </div>
@@ -139,22 +145,21 @@
           <div class="row">
             <div class="col-sm-6">
               <p>Pogon motorja</p>
-              <div class="row">
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pogon" id="pogon1" value="0">
-                    <label class="form-check-label" for="pogon1">
-                      Dizel
-                    </label>
+              <div class="radioButtons">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="pogon" id="pogon1" value="0" required>
+                  <label class="form-check-label" for="pogon1">
+                    Dizel
+                  </label>
+                  <div class="invalid-feedback">
+                    Izberite tip pogona
                   </div>
                 </div>
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pogon" id="pogon2" value="1">
-                    <label class="form-check-label" for="pogon2">
-                      Bencin
-                    </label>
-                  </div>
+                <div class="form-check rbNotFirst">
+                  <input class="form-check-input" type="radio" name="pogon" id="pogon2" value="1" required>
+                  <label class="form-check-label" for="pogon2">
+                    Bencin
+                  </label>
                 </div>
               </div>
             </div>
@@ -167,7 +172,7 @@
             <button type="button" id="myButton" class="btn btn-primary">Naprej</button>
           </div>
         </div>
-      
+      </form>
     </div>
 
     <!-- You can also require other files to run in this process -->

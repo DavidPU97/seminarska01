@@ -58,6 +58,9 @@ $(function() {
   }
   $('input[name="datetimes"]').on('change', function(){
     let daysCalendar = Math.ceil((new Date($('#date').data('daterangepicker').endDate._d.valueOf()) - new Date($('#date').data('daterangepicker').startDate._d.valueOf()))/86400000);
+    if(daysCalendar == 0){
+      daysCalendar = 1
+    }
     if(bonus){
       document.getElementById('total_price').innerHTML = 'CENA: '+(daysCalendar*100+daysCalendar*2)+'€';
     }
@@ -96,9 +99,22 @@ $(function() {
   }
 });
 
-
-
 document.getElementById("myButton").onclick = function () {
+
+  let valid = true
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+        if (!form.checkValidity()) {
+          valid = false
+        }
+
+        form.classList.add('was-validated')
+    })
+  
   sessionStorage.setItem("locStart", $('#prevzem').val());
   sessionStorage.setItem("locEnd", $('#vračilo').val());
   sessionStorage.setItem("model", $('#model').val());
@@ -117,7 +133,9 @@ document.getElementById("myButton").onclick = function () {
   let newStrEnd = dateSplitEnd[1]+'/'+ dateSplitEnd[0]+'/'+dateSplitEnd[2]
   sessionStorage.setItem("endDate", newStrEnd);
   //console.log($('#prevzem').val(), $('#vračilo').val(), $('#date').data('daterangepicker').startDate._d.toLocaleDateString(), $('#date').data('daterangepicker').endDate)
-  location.href = "user_page.html";
+  if(valid){
+    location.href = "user_page.html";
+  }
 };
 
 $('input[name="velikost"]').on('change', function(){

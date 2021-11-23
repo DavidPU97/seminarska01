@@ -16,8 +16,22 @@
 #total_price{
     font-weight: bold;
     font-size: large;
+    margin-bottom: 1rem;
 }
 
-#backBtn{
+#backBtn, #submitBtn{
     margin-bottom: 1rem;
+}
+
+#submitDiv, #backDiv{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.rbNotFirst{
+    padding-left: 2.25rem !important;
+}
+
+.radioButtons{
+    display: inline-flex;
 }

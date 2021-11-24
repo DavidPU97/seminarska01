@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="scripts/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="scripts/bootstrap.min.css" />
+    
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/moment.min.js"></script>
+    <script type="text/javascript" src="scripts/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="scripts/popper.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    
+    
+    <title>Izposojevalnica avtomobilov Avtek</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Izposojevalnica Avtek!</h1>
+        <div class="row">
+            <div class="col-6">
+                <div id="avto">Podatki avtomobila</div>
+                <div>Lokacija prevzema: <span id="prevzem"></span></div>
+                <div>Lokacija vračila: <span id="vračilo"></span></div> 
+                <div>Začetek izposoje: <span id="zacetekIzposoje"></span></div>
+                <div>Konec izposoje: <span id="konecIzposoje"></span></div>
+                <div>Velikost vozila: <span id="velikost"></span></div>
+                <div>Model vozila: <span id="model"></span></div>
+                <div>Vrsta menjalnika: <span id="menjalnik"></span></div>
+                <div>Pogon motorja: <span id="pogon"></span></div>
+            </div>
+            <div class="col-6">
+                <div id="narocnik">Podatki naročnika</div>
+                <div>Ime: <span id="name"></span></div>
+                <div>Priimek: <span id="surname"></span></div> 
+                <div>Naslov: <span id="address"></span></div> 
+                <div>Mesto: <span id="city"></span></div> 
+                <div>Poštna številka: <span id="postcode"></span></div> 
+                <div>E-mail: <span id="email"></span></div> 
+                <div>Tel. številka: <span id="phone"></span></div> 
+                <div>Starost: <span id="age"></span></div> 
+                <div>Izpit: <span id="car_license"></span></div> 
+                <div>Zavarovanje: <span id="zavarovanje"></span></div> 
+                <div>Način plačila: <span id="placilo"></span></div> 
+                <div id="cardnumberParent">Številka kartice: <span id="cardnumber"></span></div> 
+                <div id="ccvParent">CCV: <span id="ccv"></span></div> 
+            </div> 
+            <div class="col-sm-12 d-flex align-items-end justify-content-end">
+                <div id="total_price" class="total_price">CENA: </div>
+            </div>
+            <div class="col" >
+                <button type="button" id="backBtn2" class="btn btn-primary">Nazaj</button>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button type="button" id="potrdiBtn" class="btn btn-success d-flex justify-content-end">Potrdi</button>
+            </div>
+        </div>  
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer3.js"></script>
+  </body>
+</html>

@@ -30,14 +30,14 @@ $(function() {
     }
   });
 
-  if(sessionStorage.getItem("startDate") != null && sessionStorage .getItem("endDate") != null){
-    $('#date').data('daterangepicker').setStartDate(sessionStorage .getItem("startDate"));
-    $('#date').data('daterangepicker').startDate._d.setHours(sessionStorage .getItem("startHour"));
-    $('#date').data('daterangepicker').startDate._d.setMinutes(sessionStorage .getItem("startMin"));
+  if(sessionStorage.getItem("startDate") != null && sessionStorage.getItem("endDate") != null){
+    $('#date').data('daterangepicker').setStartDate(sessionStorage.getItem("startDate"));
+    $('#date').data('daterangepicker').startDate._d.setHours(sessionStorage.getItem("startHour"));
+    $('#date').data('daterangepicker').startDate._d.setMinutes(sessionStorage.getItem("startMin"));
   
-    $('#date').data('daterangepicker').setEndDate(sessionStorage .getItem("endDate"));
-    $('#date').data('daterangepicker').endDate._d.setHours(sessionStorage .getItem("endHour"));
-    $('#date').data('daterangepicker').endDate._d.setMinutes(sessionStorage .getItem("endMin"));
+    $('#date').data('daterangepicker').setEndDate(sessionStorage.getItem("endDate"));
+    $('#date').data('daterangepicker').endDate._d.setHours(sessionStorage.getItem("endHour"));
+    $('#date').data('daterangepicker').endDate._d.setMinutes(sessionStorage.getItem("endMin"));
   }
 
   if(sessionStorage.getItem('days') == null){
@@ -51,10 +51,10 @@ $(function() {
   }
   console.log(bonus)
   if(bonus){
-    document.getElementById('total_price').innerHTML = 'CENA: '+(days*100+days*2)+'€';
+    document.getElementById('total_price_index').innerHTML = 'CENA: '+(days*100+days*2)+'€';
   }
   else{
-    document.getElementById('total_price').innerHTML = 'CENA: '+days*100+'€';
+    document.getElementById('total_price_index').innerHTML = 'CENA: '+days*100+'€';
   }
   $('input[name="datetimes"]').on('change', function(){
     let daysCalendar = Math.ceil((new Date($('#date').data('daterangepicker').endDate._d.valueOf()) - new Date($('#date').data('daterangepicker').startDate._d.valueOf()))/86400000);
@@ -62,10 +62,10 @@ $(function() {
       daysCalendar = 1
     }
     if(bonus){
-      document.getElementById('total_price').innerHTML = 'CENA: '+(daysCalendar*100+daysCalendar*2)+'€';
+      document.getElementById('total_price_index').innerHTML = 'CENA: '+(daysCalendar*100+daysCalendar*2)+'€';
     }
     else{
-      document.getElementById('total_price').innerHTML = 'CENA: '+daysCalendar*100+'€';
+      document.getElementById('total_price_index').innerHTML = 'CENA: '+daysCalendar*100+'€';
     }
     sessionStorage.setItem('days', daysCalendar)
   });

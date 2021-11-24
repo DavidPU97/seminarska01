@@ -19,11 +19,22 @@
     margin-bottom: 1rem;
 }
 
-#backBtn, #submitBtn{
-    margin-bottom: 1rem;
+#total_price_index{
+    font-weight: bold;
+    font-size: large;
 }
 
-#submitDiv, #backDiv{
+.total_price{
+    margin-right: 2vw;
+    margin-top: 1rem;
+}
+
+#backBtn, #submitBtn, #myButton{
+    margin-bottom: 1rem;
+    margin-right: 15px;
+}
+
+#submitDiv{
     padding-left: 0;
     padding-right: 0;
 }
@@ -34,4 +45,30 @@
 
 .radioButtons{
     display: inline-flex;
+}
+
+span{
+    float: right;
+    margin-right: 2vw;
+}
+
+#avto, #narocnik{
+    font-weight: bold;
+}
+
+#potrdiBtn{
+    margin-right: 2vw;
+    margin-top: 2vh;
+}
+
+#backBtn2{
+    margin-top: 2vh;
+}
+
+.placeholder-text{
+    display: none;
+}
+
+#cardNoSafe{
+    display:none;
 }

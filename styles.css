@@ -61,7 +61,7 @@ span{
     margin-top: 2vh;
 }
 
-#backBtn2{
+#backBtn2, #timeoutBtn{
     margin-top: 2vh;
 }
 
@@ -74,6 +74,6 @@ span{
 }
 
 #timeout{
-    float: left;
+    float: none;
     margin-right: inherit;
 }

@@ -118,6 +118,14 @@ var saveData = function(bonus){
     sessionStorage.setItem("ccv", $('#ccv').val());
 }
 
+document.getElementById("phone").onkeypress = function (event) {
+    let element = document.getElementById("phone")
+    /*if (isNaN(event.key) && !isAllowedKey(event)) {
+		event.preventDefault();
+	}*/
+	
+    //limit(event, element, 9)	
+}
 
 // CREDIT CARD FORMAT
 

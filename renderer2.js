@@ -94,6 +94,56 @@ $(function() {
             location.href = "data_overview.html";
         }
     };
+
+    $("#phone").inputFilter(function(value) {
+        return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+    });
+    
+    $("#ccv").inputFilter(function(value) {
+        return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+    });
+
+    $("#postcode").inputFilter(function(value) {
+        return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+    });
+
+    $("#age").inputFilter(function(value) {
+        return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+    });
+
+    $("#car_license").inputFilter(function(value) {
+        return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+    });
+
+    var max_chars_ccv = 3;
+
+    $('#ccv').keydown( function(e){
+        if ($(this).val().length >= max_chars_ccv) { 
+            $(this).val($(this).val().substr(0, max_chars_ccv));
+        }
+    });
+
+    $('#ccv').keyup( function(e){
+        if ($(this).val().length >= max_chars_ccv) { 
+            $(this).val($(this).val().substr(0, max_chars_ccv));
+        }
+    });
+
+
+    var max_chars_phone = 9;
+
+    $('#phone').keydown( function(e){
+        if ($(this).val().length >= max_chars_phone) { 
+            $(this).val($(this).val().substr(0, max_chars_phone));
+        }
+    });
+
+    $('#phone').keyup( function(e){
+        if ($(this).val().length >= max_chars_phone) { 
+            $(this).val($(this).val().substr(0, max_chars_phone));
+        }
+    });
+
 });
 
 
@@ -116,15 +166,6 @@ var saveData = function(bonus){
     sessionStorage.setItem("cardnumber", $('#cardnumber').val());
     sessionStorage.setItem("cardNoSafe", $('#cardNoSafe').val());
     sessionStorage.setItem("ccv", $('#ccv').val());
-}
-
-document.getElementById("phone").onkeypress = function (event) {
-    let element = document.getElementById("phone")
-    /*if (isNaN(event.key) && !isAllowedKey(event)) {
-		event.preventDefault();
-	}*/
-	
-    //limit(event, element, 9)	
 }
 
 // CREDIT CARD FORMAT
@@ -209,6 +250,22 @@ function isTextSelected(input) {
 	return false;
 }
 
-function hideCardValue(val) {
+// only number function
 
-}
+// Restricts input for the set of matched elements to the given inputFilter function.
+(function($) {
+    $.fn.inputFilter = function(inputFilter) {
+      return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+        if (inputFilter(this.value)) {
+          this.oldValue = this.value;
+          this.oldSelectionStart = this.selectionStart;
+          this.oldSelectionEnd = this.selectionEnd;
+        } else if (this.hasOwnProperty("oldValue")) {
+          this.value = this.oldValue;
+          this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        } else {
+          this.value = "";
+        }
+      });
+    };
+  }(jQuery));

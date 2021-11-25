@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="scripts/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="scripts/bootstrap.min.css" />
+    
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/moment.min.js"></script>
+    <script type="text/javascript" src="scripts/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="scripts/popper.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    
+    
+    <title>Izposojevalnica avtomobilov Avtek</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Izposojevalnica Avtek!</h1>
+        <div class="row">
+            <div class="col">
+                <div>Podatki so zabeleženi. Preusmeritev na prvo stran čez <span id="timeout">10</span> sekund.</div>
+                </div>
+            <div class="col-12 ">
+                <button type="button" id="timeoutBtn" class="btn btn-success">Prva stran</button>
+            </div>
+        </div>  
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer4.js"></script>
+  </body>
+</html>

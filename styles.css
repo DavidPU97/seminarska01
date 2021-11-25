@@ -72,3 +72,8 @@ span{
 #cardNoSafe{
     display:none;
 }
+
+#timeout{
+    float: left;
+    margin-right: inherit;
+}

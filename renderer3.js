@@ -42,8 +42,15 @@ $(function() {
     }
     $("#zavarovanje").html(zavarovanje)
     $("#placilo").html(sessionStorage.getItem("placilo"))
-    $("#cardnumber").html(sessionStorage.getItem("cardnumber"))
-    $("#ccv").html(sessionStorage.getItem("ccv"))
+
+    if(sessionStorage.getItem("placilo") === "Gotovina"){
+        $('#cardnumberParent').hide()
+        $('#ccvParent').hide()
+    }
+    else{
+        $("#cardnumber").html(sessionStorage.getItem("cardnumber"))
+        $("#ccv").html(sessionStorage.getItem("ccv"))
+    }
 
     let bonus = sessionStorage.getItem("zavarovanje").toLowerCase() === 'true'
     let days = parseInt(sessionStorage.getItem('days'))
@@ -55,7 +62,12 @@ $(function() {
     }
 
 
+    document.getElementById("potrdiBtn").onclick = function () {
+        sessionStorage.clear()
+        location.href = "feedback.html";
+    };
+
     document.getElementById("backBtn2").onclick = function () {
         location.href = "user_page.html";
-      };
+    };
 });

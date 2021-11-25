@@ -73,10 +73,7 @@ $(function() {
         location.href = "index.html";
     };
 
-    document.getElementById("submitDiv").onclick = function () {
-
-        // DELETE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //saveData(bonus);
+    document.getElementById("submitBtn").onclick = function () {
         let valid = true
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.querySelectorAll('.needs-validation')

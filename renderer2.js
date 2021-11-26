@@ -115,37 +115,117 @@ $(function() {
         return /^\d*$/.test(value);    // Allow digits only, using a RegExp
     });
 
-    var max_chars_ccv = 3;
-
-    $('#ccv').keydown( function(e){
-        if ($(this).val().length >= max_chars_ccv) { 
-            $(this).val($(this).val().substr(0, max_chars_ccv));
+    $('#name').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#name-limit").show();
+        }
+        else{
+            $("#name-limit").hide();
         }
     });
 
-    $('#ccv').keyup( function(e){
-        if ($(this).val().length >= max_chars_ccv) { 
-            $(this).val($(this).val().substr(0, max_chars_ccv));
+    $('#surname').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#surname-limit").show();
+        }
+        else{
+            $("#surname-limit").hide();
         }
     });
 
-
-    var max_chars_phone = 9;
-
-    $('#phone').keydown( function(e){
-        if ($(this).val().length >= max_chars_phone) { 
-            $(this).val($(this).val().substr(0, max_chars_phone));
+    $('#address').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#address-limit").show();
+        }
+        else{
+            $("#address-limit").hide();
         }
     });
 
-    $('#phone').keyup( function(e){
-        if ($(this).val().length >= max_chars_phone) { 
-            $(this).val($(this).val().substr(0, max_chars_phone));
+    $('#city').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#city-limit").show();
+        }
+        else{
+            $("#city-limit").hide();
+        }
+    });
+
+    $('#postcode').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#postcode-limit").show();
+        }
+        else{
+            $("#postcode-limit").hide();
+        }
+    });
+
+    $('#email').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#email-limit").show();
+        }
+        else{
+            $("#email-limit").hide();
+        }
+    });
+
+    $('#phone').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#phone-limit").show();
+        }
+        else{
+            $("#phone-limit").hide();
+        }
+    });
+
+    $('#age').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#age-limit").show();
+        }
+        else{
+            $("#age-limit").hide();
+        }
+    });
+
+    $('#car_license').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#car-limit").show();
+        }
+        else{
+            $("#car-limit").hide();
+        }
+    });
+
+    $('#cardnumber').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#cardnumber-limit").show();
+        }
+        else{
+            $("#cardnumber-limit").hide();
+        }
+    });
+
+    $('#ccv').keyup(function(){
+        console.log("a")
+        if(this.value.length > 99){
+            $("#ccv-limit").show();
+        }
+        else{
+            $("#ccv-limit").hide();
         }
     });
 
 });
-
 
 $('input[name="placilo"]').on('change', function(){
     sessionStorage.setItem('placilo', $(this).val());
